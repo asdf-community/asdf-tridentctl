@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euo pipefail
+set -e -o pipefail
 
 function list_all() {
   local releases_path="https://api.github.com/repos/NetApp/trident/releases"
