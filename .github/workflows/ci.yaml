@@ -9,7 +9,10 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
     steps:
     - uses: actions/checkout@v2
     - uses: asdf-vm/actions/plugin-test@v1.0.0
